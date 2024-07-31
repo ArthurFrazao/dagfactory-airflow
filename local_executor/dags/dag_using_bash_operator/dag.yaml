@@ -1,0 +1,22 @@
+dag:
+  dag_id: dag_using_bash_operator
+  schedule_interval: 
+  description: 
+  default_args:
+    owner: cc_marketing@example.com
+    start_date: "2024-07-19 08:00:00"
+  tags:
+    - cc_marketing
+    
+tasks:
+  task_echo:
+    operator: bash
+    file: script.sh
+    env:
+      environment: production
+
+  task_download:
+    operator: bash
+    bash_command: 'curl "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Apache%20Airflow/Build%20a%20DAG%20using%20Airflow/web-server-access-log.txt" > /opt/airflow/dags/web_server_log.txt'
+
+execution: "task_echo >> task_download"
