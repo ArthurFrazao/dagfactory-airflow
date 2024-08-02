@@ -1,7 +1,7 @@
 # Deploy Apache Airflow using Docker Compose and Local Executor
 
 ## Quick Access
-- [Informations](#informations)
+- [Requirements](#requirements)
 - [Set Up Airflow](#set-up-airflow)
   - [Step 1: Create a Project Directory](#step-1-create-a-project-directory)
   - [Step 2: Download Docker Compose YAML File from official Apache Airflow repository on GitHub](#step-2-download-docker-compose-yaml-file-from-official-apache-airflow-repository-on-github)
@@ -14,7 +14,7 @@
   - [Step 9: Run Docker Compose](#step-9-run-docker-compose)
   - [Step 10: Access Airflow Web App](#step-10-access-airflow-web-app)
 
-## Informations
+## Requirements
 
 * Install [Docker](https://www.docker.com/)
 * Install [Docker Compose](https://docs.docker.com/compose/install/)
