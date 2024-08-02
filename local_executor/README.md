@@ -20,7 +20,7 @@ cd <project_name>
 
 ### Step 2: Download Docker Compose YAML File from official Apache Airflow repository on GitHub
 
-Replace `version` with your preference below. In this project we will use version 2.9.3.
+Replace `version` with your preference below. **In this project we will use version 2.9.3**.
 
 ```bash
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/<version>/docker-compose.yaml'
@@ -43,7 +43,7 @@ mkdir -p ./dags ./logs ./plugins ./config
 touch Dockerfile requirements.txt .env
 ```
 
-- Dockerfile
+- Dockerfile:
 
 This file is used to create a custom airflow image
 
@@ -55,7 +55,7 @@ This file is used to add new Python libraries to be used in Airflow.
 
 This file is used to store sensitive airflow information.
 
-### Step 5: Edit Docker Compose
+### Step 5: Edit Docker Compose file
 
 Make the following changes:
 
@@ -133,7 +133,7 @@ EXPOSE 8080
 WORKDIR ${AIRFLOW_HOME}
 ```
 
-### Step 7: Edit Requirements
+### Step 7: Edit requirements file
 
 In this project we will use the following libraries. Feel free to add any libraries you need
 
