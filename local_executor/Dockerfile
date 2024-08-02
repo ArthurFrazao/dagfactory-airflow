@@ -4,16 +4,7 @@ ENV AIRFLOW_HOME=/opt/airflow
 
 USER root
 
-RUN apt-get update && apt-get install -y python3-pip \
-    libcurl4-gnutls-dev \
-    librtmp-dev \
-    python3-dev \
-    libpq-dev \
-    inotify-tools
-
-# COPY ./config/* /config/
-
-# RUN chmod +x -R /config
+RUN apt-get update && apt-get install -y python3-pip
 
 COPY requirements.txt requirements.txt
 
