@@ -13,6 +13,7 @@
   - [Step 8: Set Up Airflow Init](#step-8-set-up-airflow-init)
   - [Step 9: Run Docker Compose](#step-9-run-docker-compose)
   - [Step 10: Access Airflow Web App](#step-10-access-airflow-web-app)
+- [Dag Factory](#dag-factory)
 
 ## Requirements
 
@@ -157,7 +158,7 @@ apache-airflow-providers-mysql
 Run the following command to start Apache Airflow instance:
 
 ```
-airflow-init
+sudo docker compose up airflow-init
 ```
 
 ### Step 9: Run Docker Compose
