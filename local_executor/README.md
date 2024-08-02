@@ -57,15 +57,15 @@ mkdir -p ./dags ./logs ./plugins ./config
 touch Dockerfile requirements.txt .env
 ```
 
-- Dockerfile:
+- `Dockerfile:`
 
 This file is used to create a custom airflow image
 
-- requirements.txt
+- `requirements.txt`
 
 This file is used to add new Python libraries to be used in Airflow.
 
-- .env
+- `.env`
 
 This file is used to store sensitive airflow information.
 
@@ -87,39 +87,39 @@ Some settings used in yaml as sensitive data can be stored in an `.env` file and
 
 In this project we will define the following variables:
 
-- POSTGRES_USER
+- `POSTGRES_USER`
 
 This variable specifies the user name of the Airflow metadata database administrator.
 
-- POSTGRES_PASSWORD
+- `POSTGRES_PASSWORD`
 
 This variable specifies the password of the airflow metadata database administrator
 
-- POSTGRES_DB
+- `POSTGRES_DB`
 
 This variable specifies the database name of the airflow metadata database
 
-- _AIRFLOW_WWW_USER_USERNAME
+- `_AIRFLOW_WWW_USER_USERNAME`
 
 This variable specifies the username for the administrator account to access the Airflow web interface.
 
-- _AIRFLOW_WWW_USER_PASSWORD
+- `_AIRFLOW_WWW_USER_PASSWORD`
 
 This variable specifies the password for the administrator account used to access the Airflow web interface.
 
-- AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL
+- `AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL`
 
 This variable specifies how often (in seconds) the DAGs directory should be scanned for new files
 
-- AIRFLOW_UID
+- `AIRFLOW_UID`
 
 User ID in Airflow containers
 
-- AIRFLOW_PROJ_DIR
+- `AIRFLOW_PROJ_DIR`
 
 This variable specifies the project directory for Airflow inside the container. It is set to the current directory (.)
 
-- AIRFLOW__CORE__EXECUTOR
+- `AIRFLOW__CORE__EXECUTOR`
 
 Specifies the executor as `LocalExecutor`
 
