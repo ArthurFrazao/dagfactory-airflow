@@ -75,6 +75,7 @@ Make the following changes:
 
 - Comment this line: `#image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:<version>}`
 - Uncomment this line: `build: .`
+- Run this command: `echo -e "AIRFLOW_UID=$(id -u)" > .env`
 
 It should look like this.
 
@@ -110,10 +111,6 @@ This variable specifies the password for the administrator account used to acces
 - `AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL`
 
 This variable specifies how often (in seconds) the DAGs directory should be scanned for new files
-
-- `AIRFLOW_UID`
-
-User ID in Airflow containers
 
 - `AIRFLOW_PROJ_DIR`
 
