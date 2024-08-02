@@ -70,20 +70,11 @@ This file is used to add new Python libraries to be used in Airflow.
 
 This file is used to store sensitive airflow information.
 
-### Step 5: Edit Docker Compose file
+### Step 5: Edit Environment Variable file
 
-Make the following changes:
+Run the following command:
 
-- Comment this line: `#image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:<version>}`
-- Uncomment this line: `build: .`
 - Run this command: `echo -e "AIRFLOW_UID=$(id -u)" > .env`
-
-It should look like this.
-
-```yaml
-#image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:<version>}
-build: .
-```
 
 Some settings used in yaml as sensitive data can be stored in an `.env` file and used as environment variables in the Docker Compose file
 
@@ -153,7 +144,21 @@ In this project we will use the following libraries. Feel free to add any librar
 apache-airflow-providers-mysql
 ```
 
-### Step 8: Set Up Airflow Init
+### Step 8: Edit Docker Compose file
+
+Make the following changes in `docker-compose-yaml`:
+
+- Comment this line: `#image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:<version>}`
+- Uncomment this line: `build: .`
+
+It should look like this.
+
+```yaml
+#image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:<version>}
+build: .
+```
+
+### Step 9: Set Up Airflow Init
 
 Run the following command to start Apache Airflow instance:
 
@@ -161,7 +166,7 @@ Run the following command to start Apache Airflow instance:
 sudo docker compose up airflow-init
 ```
 
-### Step 9: Run Docker Compose
+### Step 10: Run Docker Compose
 
 With the configuration in place, run the following command to start Apache Airflow using Docker Compose:
 
@@ -177,7 +182,7 @@ It should look like this.
 sudo docker compose up -d
 ```
 
-### Step 10: Access Airflow Web App
+### Step 11: Access Airflow Web App
 
 Once the containers are up and running, open your web browser and navigate to `http://localhost:8080`. You'll be greeted with the Apache Airflow login page. Log in to Apache Airflow with this account
 
@@ -186,3 +191,5 @@ Use the values of the following variables defined in the .env files
 - Username: `<_AIRFLOW_WWW_USER_USERNAME>`
 
 - Password: `<_AIRFLOW_WWW_USER_PASSWORD>`
+
+## Dag Factory
