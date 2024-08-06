@@ -35,7 +35,7 @@ cd <project_name>
 
 ### Step 2: Download Docker Compose YAML File from official Apache Airflow repository on GitHub
 
-Replace `version` with your preference below. **In this project we will use version 2.9.3**.
+Replace `version` with your preference below. **This project uses version 2.9.3**.
 
 ```bash
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/<version>/docker-compose.yaml'
